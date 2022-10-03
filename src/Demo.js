@@ -52,4 +52,29 @@ class Demo02 extends React.Component {
     }
 }
 
-export { Demo01, Demo02, Fundemo }
+class Demo03 extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            isTogglenOn:true
+        }
+        // 绑定this
+        this.handleClick = this.handleClick.bind(this);
+    }
+    // 回调函数
+    handleClick(){
+        this.setState(state =>({
+            isTogglenOn:!state.isTogglenOn
+        }));
+    }
+
+    render() {
+        return(
+            <Button variant="contained" color="primary" onClick={this.handleClick}>
+                {this.state.isTogglenOn ? "on" : "off"}
+            </Button>
+        )
+    }
+}
+
+export { Demo01, Demo02,Demo03, Fundemo }

@@ -1,7 +1,6 @@
 
 import './App.css';
-import { Demo01, Demo02, Fundemo, } from './Demo'
-
+import { Demo01, Demo02,Demo03, Fundemo, } from './Demo'
 
 import Button from '@material-ui/core/Button'
 
@@ -22,6 +21,9 @@ function App() {
         <Fundemo name="Fundemo组件接收的父组件的传值"></Fundemo>
         <Separate name="demo02"></Separate>
         <Demo02></Demo02>
+        <Separate name="demo03 请点击下面的按钮体验react的事件"></Separate>
+        <Demo03></Demo03>
+
     </div>
   );
 }
