@@ -145,4 +145,29 @@ class Demo04 extends React.Component {
 // ——————————————————————————————————————————
 
 
-export { Demo01, Demo02, Demo03, Demo04, Fundemo }
+class Demo05 extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts : [
+                {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+                {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+              ]
+        }
+        
+    }
+    render(){
+        const content = this.state.posts.map((post) => 
+        <div key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.content}</p>
+        </div>
+        )
+        return(
+            <div>{content}</div>
+        ) }
+
+}
+
+
+export { Demo01, Demo02, Demo03, Demo04,Demo05, Fundemo }

@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Demo01, Demo02,Demo03,Demo04, Fundemo, } from './Demo'
+import { Demo01, Demo02,Demo03,Demo04,Demo05, Fundemo, } from './Demo'
 
 import Button from '@material-ui/core/Button'
 
@@ -25,6 +25,8 @@ function App() {
         <Demo03></Demo03>
         <Separate name="demo04"></Separate>
         <Demo04></Demo04>
+        <Separate name="demo05"></Separate>
+        <Demo05></Demo05>
 
 
     </div>
