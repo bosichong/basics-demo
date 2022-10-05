@@ -1,13 +1,9 @@
 
 import './App.css';
-import { Demo01, Demo02,Demo03,Demo04,Demo05, Fundemo, } from './Demo'
-
+import { Demo01, Demo02,Demo03,Demo04,Demo05, Fundemo,Separate } from './Demo'
+import FormDemo from './FormDemo';
 import Button from '@material-ui/core/Button'
 
-
-function Separate(props) {
-  return <p>_____________{props.name}____________</p>
-}
 
 function App() {
   return (
@@ -27,6 +23,9 @@ function App() {
         <Demo04></Demo04>
         <Separate name="demo05"></Separate>
         <Demo05></Demo05>
+
+        <Separate name="demo06"></Separate>
+        <FormDemo />
 
 
     </div>

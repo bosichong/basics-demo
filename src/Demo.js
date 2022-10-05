@@ -1,6 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
+
+function Separate(props) {
+    return <p>_____________{props.name}____________</p>
+  }
 class Demo01 extends React.Component {
     // es6组件
     render() {
@@ -170,4 +174,4 @@ class Demo05 extends React.Component {
 }
 
 
-export { Demo01, Demo02, Demo03, Demo04,Demo05, Fundemo }
+export { Demo01, Demo02, Demo03, Demo04,Demo05, Separate,Fundemo }
