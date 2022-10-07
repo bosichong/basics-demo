@@ -1,35 +1,181 @@
-
+import React from 'react'
+import { NavLink, useRoutes } from "react-router-dom";
 import './App.css';
-import { Demo01, Demo02,Demo03,Demo04,Demo05, Fundemo,Separate } from './Demo'
-import FormDemo from './FormDemo';
-import Button from '@material-ui/core/Button'
+
+import Home from './components/Home';
+import About from './components/About';
+
+import routes from './routes'
+
+
+
+
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+
+
+const drawerWidth = 240;
+
+function ResponsiveDrawer(props) {
+  const element = useRoutes(routes)
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const drawer = (
+    <div>
+      <Toolbar />
+      <Divider />
+      <List>
+        <ListItem key="Home" disablePadding>
+          <ListItemButton to="/home">
+            {/* <NavLink className="list-group-item" to="/home"></NavLink> */}
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="基础实例" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+      <ListItem key="About" disablePadding>
+        <ListItemButton to="/about">
+          <ListItemIcon>
+            <MailIcon />
+          </ListItemIcon>
+          <ListItemText primary="HOOK" />
+        </ListItemButton>
+      </ListItem>
+      <ListItem key="About" disablePadding>
+        <ListItemButton to="/about">
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText primary="Router" />
+        </ListItemButton>
+      </ListItem>
+      <ListItem key="About" disablePadding>
+        <ListItemButton to="/about">
+          <ListItemIcon>
+            <MailIcon />
+          </ListItemIcon>
+          <ListItemText primary="待定" />
+        </ListItemButton>
+      </ListItem>
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </div >
+  );
+
+  const container = window !== undefined ? () => window().document.body : undefined;
+
+  return (
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar
+        position="fixed"
+        sx={{
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          ml: { sm: `${drawerWidth}px` },
+        }}
+      >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap component="div">
+            Responsive drawer
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Box
+        component="nav"
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        aria-label="mailbox folders"
+      >
+        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        {/* 这里是隐藏后弹出的抽屉 */}
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+        <Drawer
+          variant="permanent"
+          sx={{
+            display: { xs: 'none', sm: 'block' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+          open
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+      >
+        <Toolbar />
+        {element}
+      </Box>
+    </Box>
+  );
+}
+
+
+
 
 
 function App() {
   return (
-    <div className="App">
-        <Separate name="demo00"></Separate>
-        <Button variant="contained" color="secondary">
-          demo 00 添加一个按钮 粉红色的按钮好看吗?
-        </Button>
-        <Separate name="demo01"></Separate>
-        <Demo01 name="class组件属性的赋值"></Demo01>
-        <Fundemo name="Fundemo组件接收的父组件的传值"></Fundemo>
-        <Separate name="demo02"></Separate>
-        <Demo02></Demo02>
-        <Separate name="demo03 请点击下面的按钮体验react的事件"></Separate>
-        <Demo03></Demo03>
-        <Separate name="demo04"></Separate>
-        <Demo04></Demo04>
-        <Separate name="demo05"></Separate>
-        <Demo05></Demo05>
-
-        <Separate name="demo06"></Separate>
-        <FormDemo />
-
-
-    </div>
-  );
+    
+      <div className="App">
+        <ResponsiveDrawer />
+      </div>
+  )
 }
 
 export default App;
