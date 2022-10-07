@@ -31,11 +31,11 @@ function ControlledAccordions() {
           <Typography sx={{ color: 'text.secondary' }}>渲染一个mui Button</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            <Button variant="contained" color="secondary">
-              添加一个粉红色的按钮好看吗?
-            </Button>
-          </Typography>
+
+          <Button variant="contained" color="secondary">
+            添加一个粉红色的按钮好看吗?
+          </Button>
+
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
@@ -50,10 +50,9 @@ function ControlledAccordions() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            <Demo01 name="class组件属性的赋值"></Demo01>
-            <Fundemo name="Fundemo组件接收的父组件的传值"></Fundemo>
-          </Typography>
+
+          <Demo01 name="class组件属性的赋值"></Demo01>
+          <Fundemo name="Fundemo组件接收的父组件的传值"></Fundemo>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
@@ -63,16 +62,16 @@ function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '20%', flexShrink: 0 }}>
-          生命周期及状态
+            生命周期及状态
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-          componentWillMount()组件挂载,componentWillUnmount() 组件卸载
+            componentWillMount()组件挂载,componentWillUnmount() 组件卸载
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+
           <Demo02 />
-          </Typography>
+
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
@@ -82,16 +81,16 @@ function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '20%', flexShrink: 0 }}>
-          事件处理
+            事件处理
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-          点击按钮文字会来回切换
+            点击按钮文字会来回切换
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+
           <Demo03 />
-          </Typography>
+
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
@@ -101,16 +100,16 @@ function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '20%', flexShrink: 0 }}>
-          条件渲染
+            条件渲染
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-          点击按钮切换登陆状态
+            点击按钮切换登陆状态
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+
           <Demo04 />
-          </Typography>
+
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
@@ -120,16 +119,16 @@ function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '20%', flexShrink: 0 }}>
-          列表渲染
+            列表渲染
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-          使用JavaScript中的map()方法遍历数组循环渲染.
+            使用JavaScript中的map()方法遍历数组循环渲染.
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+
           <Demo05 />
-          </Typography>
+
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
@@ -139,16 +138,16 @@ function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '20%', flexShrink: 0 }}>
-          简单表单
+            简单表单
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-          一个简单的表单例子
+            一个简单的表单例子
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+
           <FormDemo />
-          </Typography>
+
         </AccordionDetails>
       </Accordion>
 

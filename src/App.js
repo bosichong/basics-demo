@@ -54,7 +54,7 @@ function ResponsiveDrawer(props) {
           </ListItemButton>
         </ListItem>
       </List>
-      <ListItem key="About" disablePadding>
+      <ListItem key="Hook" disablePadding>
         <ListItemButton to="/about">
           <ListItemIcon>
             <MailIcon />
@@ -62,7 +62,7 @@ function ResponsiveDrawer(props) {
           <ListItemText primary="HOOK" />
         </ListItemButton>
       </ListItem>
-      <ListItem key="About" disablePadding>
+      <ListItem key="Router" disablePadding>
         <ListItemButton to="/about">
           <ListItemIcon>
             <InboxIcon />
@@ -70,7 +70,7 @@ function ResponsiveDrawer(props) {
           <ListItemText primary="Router" />
         </ListItemButton>
       </ListItem>
-      <ListItem key="About" disablePadding>
+      <ListItem key="More" disablePadding>
         <ListItemButton to="/about">
           <ListItemIcon>
             <MailIcon />
@@ -79,18 +79,7 @@ function ResponsiveDrawer(props) {
         </ListItemButton>
       </ListItem>
       <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+
     </div >
   );
 
