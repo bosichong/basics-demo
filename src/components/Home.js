@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Demo01, Demo02, Demo03, Demo04, Demo05, Fundemo, Separate } from './Demo'
+import { Demo01, Demo02, Demo03, Demo04, Demo05, Fundemo,} from './Demo'
 import FormDemo from './FormDemo';
 
 
-import Button from '@material-ui/core/Button'
+import Button from '@mui/material/Button';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';

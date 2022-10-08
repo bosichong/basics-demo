@@ -1,15 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 
 
-function TestButton(props) {
-    return (
-        <Button>test</Button>
-    );
-}
+
 
 class FormDemo extends React.Component {
     constructor(props) {
@@ -18,19 +14,10 @@ class FormDemo extends React.Component {
             username: 'Jack',
             password: '12345678',
         };
-
-        // this.handleUserNameChange = this.handleUserNameChange.bind(this);
-        // this.handlePassWordChange = this.handlePassWordChange.bind(this);
+        // 绑定输入框字符变化事件,绑定按钮点击事件
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this)
     }
-
-    // handleUserNameChange(e) {
-    //     this.setState({username: e.target.value});
-    // }
-    // handlePassWordChange(e){
-    //     this.setState({password: e.target.value});
-    // }
 
     // 当需要处理多个 input 元素时，我们可以给每个元素添加 name 属性，
     // 并让处理函数根据 event.target.name 的值选择要执行的操作。
