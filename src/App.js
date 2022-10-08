@@ -1,9 +1,6 @@
 import React from 'react'
-import { NavLink, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import './App.css';
-
-import Home from './components/Home';
-import About from './components/About';
 
 import routes from './routes'
 
@@ -106,7 +103,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            一些有关于react学习的小例子与笔记
           </Typography>
         </Toolbar>
       </AppBar>
