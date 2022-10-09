@@ -1,5 +1,6 @@
-import About from '../components/About'
+import Hook from '../components/Hook-test'
 import Home from '../components/Home'
+import Route from '../components/Route-test'
 
 const routes = [
     {
@@ -7,12 +8,16 @@ const routes = [
         element:<Home />
     },
     {
-        path:'/about',
-        element:<About />
+        path:'/hook',
+        element:<Hook />
     },
     {
         path:'/home',
         element:<Home />
+    },
+    {
+        path:'/route',
+        element:<Route />
     }
 ]
 

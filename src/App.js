@@ -52,19 +52,19 @@ function ResponsiveDrawer(props) {
         </ListItem>
       </List>
       <ListItem key="Hook" disablePadding>
-        <ListItemButton to="/about">
+        <ListItemButton to="/hook">
           <ListItemIcon>
             <MailIcon />
           </ListItemIcon>
           <ListItemText primary="HOOK" />
         </ListItemButton>
       </ListItem>
-      <ListItem key="Router" disablePadding>
-        <ListItemButton to="/about">
+      <ListItem key="Route" disablePadding>
+        <ListItemButton to="/route">
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <ListItemText primary="Router" />
+          <ListItemText primary="Route" />
         </ListItemButton>
       </ListItem>
       <ListItem key="More" disablePadding>
