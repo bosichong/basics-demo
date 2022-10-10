@@ -98,7 +98,7 @@ function ControlledAccordions() {
 }
 
 
-export default function Hook() {
+export default function HookHome() {
   return (
     <>
       <ControlledAccordions />
