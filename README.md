@@ -2,11 +2,14 @@
 
 ![](./jt.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `npm -f install`
+
+请先更新依赖库,安装完毕后就可以开始运行了.
+如果无法更新,建议更换镜像源.
 
 ## Available Scripts
 
-In the project directory, you can run:
+运行程序:
 
 ### `npm start`
 
