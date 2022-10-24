@@ -1,7 +1,7 @@
-import HookHome from '../components/Hook-test'
-import Home from '../components/Home'
+import HookHome from '../comconents/Hook-test'
+import Home from '../comconents/Home'
 
-import RouteHome, { HomePage, AboutPage,NewsPage,DetailPage } from '../components/Route-test'
+import RouteHome, { HomePage, AboutPage,NewsPage,DetailPage } from '../comconents/Route-test'
 
 const routes = [
     {
